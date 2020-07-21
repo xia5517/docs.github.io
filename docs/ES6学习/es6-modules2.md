@@ -90,7 +90,7 @@ sync:  HTML解析与JS加载并行，JS加载完就执行，HTML解析等待，�
 
 两个模块文件被异步加载了。仅查看代码就判断出那个模块会被先执行，这是不可能 的。若 module1.js 首先结束下载(包括它的所有导入资源)，那么它就会首先执行。而对 于 module2.js 来说也是一样。
 
-defer 与 async 的详细见[defer 与 async](./defer-async)
+defer 与 async 的详细见[defer 与 async](/ES6学习/defer-async)
 
 ## 模块如何工作
 
