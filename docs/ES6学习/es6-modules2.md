@@ -1,8 +1,6 @@
-# mudule (二)
+# module(二) ES6 模块加载
 
 > author: baoying
-
-# module(二) ES6 模块加载
 
 ES6 定义了模块的语法，但并未定义如何加载它们，而只对一个未定义的内部操作 **HostResolveImportedModule** 指定了语法以及抽象的加载 机制。 web 浏览器与 Node.js 可以自行决定用什么方式实现 HostResolveImportedModule ， 以便更好契合各自的环境。
 
