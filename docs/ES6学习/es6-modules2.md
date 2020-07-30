@@ -194,6 +194,26 @@ CommonJS 导出拷贝的副本：
 
 `type=module`使用默认 defer 加载。
 
+## import() 动态加载 ES2020提案
+
+`import()`
+
+import() 与 import 静态加载不同：
+
+- 运行时执行。可动态拼接模块路径、可写在条件语句内。
+- 返回一个 Promise 对象。可使用 Promise 函数 all, race 等，可用在 async 函数中。
+- 不需要 `type = module`
+
+```
+Promise.all([
+  import('./module1.js'),
+  import('./module2.js'),
+  import('./module3.js'),
+])
+.then(([module1, module2, module3]) => {
+   ···
+});
+```
 
 参考：
 
