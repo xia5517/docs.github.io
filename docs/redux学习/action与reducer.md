@@ -3,7 +3,7 @@
 > author: baoying
 ## data flow
 
-![图片](https://agroup-bos-bj.cdn.bcebos.com/bj-d5c8209824d1946c02ce81723e35eae54b00fd1a)
+<img src="http://www.ruanyifeng.com/blogimg/asset/2016/bg2016091802.jpg">
 
 ### 一、调用 `store.dispatch(action)`
 
