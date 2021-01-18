@@ -1,7 +1,7 @@
-## Generator实现
+## Generator实现原理
 
 我们从一个简单的Generator使用实例开始，一步步探究Generator的实现原理：
- function关键字与函数名之间有一个星号 "*" 
+ function关键字与函数名之间有一个星号 "*"
  ```
 function* helloWorldGenerator() {
   yield 'hello';
@@ -13,7 +13,7 @@ function* helloWorldGenerator() {
 
 我们打印下执行的结果：
 ```
-var hw = helloWorldGenerator(); 
+var hw = helloWorldGenerator();
 console.log(hw.next()); // {value: "hello", done: false}
 console.log(hw.next()); // {value: "world", done: false}
 console.log(hw.next()); // {value: "ending", done: true}
@@ -178,7 +178,7 @@ function makeInvokeMethod(innerFn, context) {
     if (state === "completed") {
       return { value: undefined, done: true };
     }
-    
+
     context.method = method;
     context.arg = arg;
 
@@ -348,7 +348,7 @@ function* foo() {
   yield 'result2'
   yield 'result3'
 }
-  
+
 const gen = foo()
 console.log(gen.next().value)
 console.log(gen.next().value)
@@ -378,7 +378,7 @@ function gen$(_context) {
   }
 }
 
-// 低配版context  
+// 低配版context
 var context = {
   next:0,
   prev: 0,
@@ -400,10 +400,10 @@ let gen = function() {
       }
     }
   }
-} 
+}
 
 // 测试使用
-var g = gen() 
+var g = gen()
 g.next()  // {value: "result1", done: false}
 g.next()  // {value: "result2", done: false}
 g.next()  // {value: "result3", done: false}
